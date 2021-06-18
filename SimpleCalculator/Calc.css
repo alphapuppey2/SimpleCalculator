@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+body{
+    background-color: rgba(116, 248, 204);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.displayCalc{
+    padding:  0.75rem 1rem;
+    text-align: right;
+    width: 10.25rem;
+    font-size: calc(1rem *1.2 *1.2 *1.2);
+    background-color: rgb(26, 24, 24);
+    color: white;
+}
+.calculator{
+    box-shadow: 0em 0em 25px 0em rgba(0,0,0);
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+.Calculator_keys{
+    display: grid;
+    negative: -moz-element(key);
+    background-color: grey;
+    grid-template-columns: repeat(4,auto);
+    grid-template-areas: ". . . ."
+                         "seven eight nine myequal" 
+                         "four five six myequal" 
+                         "one two three myequal"
+                         "zero decimal reset myequal";
+                         grid-gap: 2px;
+}
+[data-type="key"]:active,
+[data-type="operator"]:active{
+    background-color: grey;
+    outline: black 20px;
+}
+[data-type = "operator"]:focus{
+    background-color: aquamarine;
+}
+
+.equal:active{
+    background-color: rgb(179, 71, 0);
+    color: white;
+
+}
+[data-type="operator"]{
+    background-color: rgb(211, 211, 211);
+}
+button{
+    border: none;
+    border-radius: 0em;
+}
+.equal{
+    grid-area: myequal;
+    background-color: rgb(247, 126, 45);
+    width: 100%;
+}
+.zero{
+    grid-area:zero;
+}
+.one{
+    grid-area:one;
+}
+.two{
+    grid-area:two;
+}
+.three{
+    grid-area:three;
+}
+.four{
+    grid-area:four;
+}
+.five{
+    grid-area:five;
+}
+.six{
+    grid-area:six;
+}
+.seven{
+    grid-area:seven;
+}
+.eight{
+    grid-area:eight;
+}
+.nine{
+    grid-area:nine;
+}
+.decimal{
+    grid-area:decimal;
+}
+.reset{
+    grid-area: reset;
+}
+[data-state = "selected"]{
+    background-color: aquamarine;
+}
+[data-state = "unselected"]{
+    background-color: grey;
+}
+
+
